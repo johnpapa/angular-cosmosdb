@@ -17,7 +17,7 @@ npm i
 
 3. Configure Cosmos DB server settings
 
-Create a file for your Cosmos DB settings named `environment.js` in the `server/env/` folder. Replace the database name key, and port with your specific configuration.
+Rename the `example-environment.js` file to `environment.js` in the `server/env/` folder and update it with your Cosmos DB settings. Replace the database name key, and port with your specific configuration.
 
 ```javascript
 // server/env/environment.js
