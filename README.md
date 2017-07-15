@@ -23,7 +23,7 @@ Create a file for your Cosmos DB settings named `environment.js` in the `server/
 // server/env/environment.js
 const dbName = 'your-cosmos-db-name-goes-here';
 const key = 'your-key-goes-here';
-const cosmosPort = 10255; // replace with your port
+const cosmosPort = 1234; // replace with your port
 
 module.exports = {
   dbName,
