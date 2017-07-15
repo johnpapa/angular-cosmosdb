@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "rules": {
+    "arrow-body-style": ["warn", "as-needed"],
+    "arrow-parens": ["warn", "as-needed"],
+    "arrow-spacing": ["warn", { "before": true, "after": true }],
+    "max-len": ["error", 100],
+    "prefer-arrow-callback": [
+      "warn",
+      {
+        "allowNamedFunctions": true
+      }
+    ],
+    "quotes": ["error", "single"],
+    "no-var": "warn",
+    "prefer-const": "warn",
+    "no-const-assign": "warn",
+    "no-this-before-super": "warn",
+    "no-undef": "warn",
+    "no-unreachable": "warn",
+    "no-unused-vars": "warn",
+    "constructor-super": "warn",
+    "valid-typeof": "warn"
+  }
+}
