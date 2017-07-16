@@ -1,16 +1,20 @@
 const Hero = require('./hero.model');
+const ReadPreference = require('mongodb').ReadPreference;
 
 const mongo = require('./mongo');
 mongo.connect();
 
 function getHeroes(req, res) {
-  Hero.find({}, (error, heroes) => {
-    if (error) {
+  const query = Hero.find({}).read(ReadPreference.NEAREST);
+  query
+    .exec()
+    .then(heroes => {
+      res.status(200).json(heroes);
+    })
+    .catch(error => {
       res.status(500).send(error);
       return;
-    }
-    res.status(200).json(heroes);
-  });
+    });
 }
 
 function postHeroes(req, res) {
