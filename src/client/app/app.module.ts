@@ -3,9 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroesService } from './heroes.service';
+import { HeroService } from './hero.service';
 import { HeroesComponent } from './heroes.component';
 
 @NgModule({
@@ -16,10 +15,9 @@ import { HeroesComponent } from './heroes.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
-    AppRoutingModule
+    HttpClientModule
   ],
-  providers: [HeroesService],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

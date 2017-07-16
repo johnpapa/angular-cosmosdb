@@ -6,6 +6,6 @@ export class AngularCosmosdbPage {
   }
 
   getParagraphText() {
-    return element(by.css('toh-root h1')).getText();
+    return element(by.css('app-root h1')).getText();
   }
 }

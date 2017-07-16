@@ -6,7 +6,7 @@ import { Hero } from './hero';
 const api = '/api';
 
 @Injectable()
-export class HeroesService {
+export class HeroService {
   constructor(private http: HttpClient) {}
 
   getHeroes() {
