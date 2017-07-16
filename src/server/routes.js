@@ -3,8 +3,6 @@ const router = express.Router();
 
 const heroService = require('./hero.service');
 
-// https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
-
 /* GET api listing. */
 router.get('/', (req, res) => {
   res.send('the api works');

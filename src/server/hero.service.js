@@ -1,8 +1,10 @@
 const Hero = require('./hero.model');
 const ReadPreference = require('mongodb').ReadPreference;
 
-const mongo = require('./mongo');
-mongo.connect();
+const mongoose = require('./mongoose');
+mongoose.connect();
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 function getHeroes(req, res) {
   const query = Hero.find({}).read(ReadPreference.NEAREST);
