@@ -1,14 +1,15 @@
 const Hero = require('./hero.model');
 const ReadPreference = require('mongodb').ReadPreference;
 
-const mongoose = require('./mongoose');
-mongoose.connect();
+const mongo = require('./mongo');
+const mongoose = mongo.mongoose;
+mongo.connect();
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 function getHeroes(req, res) {
-  const query = Hero.find({}).read(ReadPreference.NEAREST);
-  query
+  const docquery = Hero.find({}).read(ReadPreference.NEAREST);
+  docquery
     .exec()
     .then(heroes => {
       res.status(200).json(heroes);
@@ -23,10 +24,7 @@ function postHeroes(req, res) {
   const originalHero = { id: req.body.id, name: req.body.name, saying: req.body.saying };
   const hero = new Hero(originalHero);
   hero.save(error => {
-    if (error) {
-      res.status(500).send(error);
-      return;
-    }
+    if (checkServerError(res, error)) return;
     res.status(201).json(hero);
     console.log('Hero created successfully!');
   });
@@ -39,17 +37,13 @@ function putHero(req, res) {
     saying: req.body.saying
   };
   Hero.findOne({ id: originalHero.id }, (error, hero) => {
-    if (error || !hero) {
-      res.status(404).send(`Hero not found. ${error}`);
-      return;
-    }
+    if (checkServerError(res, error)) return;
+    if (!checkFound(res, hero)) return;
+
     hero.name = originalHero.name;
     hero.saying = originalHero.saying;
     hero.save(error => {
-      if (error) {
-        res.status(500).send(error);
-        return;
-      }
+      if (checkServerError(res, error)) return;
       res.status(200).json(hero);
       console.log('Hero udpated successfully!');
     });
@@ -58,14 +52,29 @@ function putHero(req, res) {
 
 function deleteHero(req, res) {
   const id = parseInt(req.params.id, 10);
-  Hero.findOneAndRemove({ id: id }, (error, hero) => {
-    if (error || !hero) {
-      res.status(404).send(`Hero not found. ${error}`);
-      return;
-    }
-    res.status(200).json(hero);
-    console.log('Hero deleted successfully!');
-  });
+  Hero.findOneAndRemove({ id: id })
+    .then(hero => {
+      if (!checkFound(res, hero)) return;
+      res.status(200).json(hero);
+      console.log('Hero deleted successfully!');
+    })
+    .catch(error => {
+      if (checkServerError(res, error)) return;
+    });
+}
+
+function checkServerError(res, error) {
+  if (error) {
+    res.status(500).send(error);
+    return error;
+  }
+}
+function checkFound(res, hero) {
+  if (!hero) {
+    res.status(404).send('Hero not found.');
+    return;
+  }
+  return hero;
 }
 
 module.exports = {
