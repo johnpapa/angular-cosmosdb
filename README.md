@@ -19,7 +19,7 @@ You can [watch me build the app as part of my series here](https://johnpapa.net/
 1. Clone this repository
 
     ```bash
-    git clone https://github.com/johnpapa/angular-cosmos.git
+    git clone https://github.com/johnpapa/angular-cosmosdb.git
     cd angular-cosmosdb
     ```
 
