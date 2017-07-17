@@ -8,11 +8,11 @@ You can [watch me build the app as part of my series here](https://johnpapa.net/
 
 1. Install the Angular CLI
 
-  ```bash
-  npm install -g @angular/cli
-  ```
+    ```bash
+    npm install -g @angular/cli
+    ```
 
-2. Install the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+1. Install the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 
 ## Getting Started
 
@@ -23,13 +23,13 @@ You can [watch me build the app as part of my series here](https://johnpapa.net/
     cd angular-cosmosdb
     ```
 
-2. Install the npm packages
+1. Install the npm packages
 
     ```bash
     npm i
     ```
 
-3. Configure Cosmos DB server settings
+1. Configure Cosmos DB server settings
 
     Rename the `example-environment.js` file to `environment.js` in the `server/env/` folder and update it with your Cosmos DB settings. Replace the database name key, and port with your specific configuration.
 
@@ -54,7 +54,7 @@ You can [watch me build the app as part of my series here](https://johnpapa.net/
     ng build
     ```
 
-2. Launch the server
+1. Launch the server
 
     ```bash
     node src/server/index.js
