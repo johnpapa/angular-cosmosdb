@@ -11,6 +11,7 @@ You can [watch me build the app as part of my series here](https://johnpapa.net/
     ```bash
     npm install -g @angular/cli
     ```
+
 1. Install the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 
 ## Getting Started
