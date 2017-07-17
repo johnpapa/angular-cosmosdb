@@ -4,6 +4,16 @@ by [John Papa](http://twitter.com/john_papa)
 
 You can [watch me build the app as part of my series here](https://johnpapa.net/angular-cosmosdb-1/)
 
+## Requirements
+
+1. Angular CLI
+
+```bash
+npm install -g @angular/cli
+```
+
+1. [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+
 ## Getting Started
 
 1. Clone this repository
