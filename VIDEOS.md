@@ -6,7 +6,7 @@ This video series shows how to build MEAN apps using Cosmos DB. Each video in th
 
 Cosmos DB makes it easy to step right in where I used to use Mongo, because it lets me use the same exact APIs I used with Mongo. Are you using the mongo npm module? No problem. Do you prefer mongoose? That works too. I just love that I don't have to change how I work! This video takes a look at what we'll build.
 
-[![MEAN and Cosmos DB - Part 1](https://img.youtube.com/vi/BzbzLAm9qQc/0.jpg)](https://www.youtube.com/watch?v=BzbzLAm9qQc)
+[![MEAN and Cosmos DB - Part 1](https://img.youtube.com/vi/BzbzLAm9qQc/3.jpg)](https://www.youtube.com/watch?v=BzbzLAm9qQc)
 
 *Node.js and Express*
 
