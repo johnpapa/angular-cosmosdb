@@ -1,6 +1,10 @@
 # Learning to Build MEAN Apps with Cosmos DB
 
+## Overview
+
 This video series shows how to build MEAN apps using Cosmos DB. Each video in the series will be a couple of minutes and show how each part of the application works.
+
+## Videos
 
 ### Part 1 - Introduction
 
