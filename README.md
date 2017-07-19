@@ -4,6 +4,8 @@ by [John Papa](http://twitter.com/john_papa)
 
 You can [watch me build the app as part of my series here](https://johnpapa.net/angular-cosmosdb-1/)
 
+You can [view all videos together here](/VIDEOS.md)
+
 [Learn more about developing Node.js apps with Azure's cloud services here](https://docs.microsoft.com/en-us/nodejs/azure)
 
 ## Requirements
