@@ -41,7 +41,7 @@ function putHero(req, res) {
     hero.save(error => {
       if (checkServerError(res, error)) return;
       res.status(200).json(hero);
-      console.log('Hero udpated successfully!');
+      console.log('Hero updated successfully!');
     });
   });
 }
