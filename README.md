@@ -62,7 +62,7 @@ You can [watch me build the app as part of my series here](https://johnpapa.net/
     node src/server/index.js
     ```
 
-3. Open the browser to http://localhost:3000
+1. Open the browser to http://localhost:3000
 
 ## Problems or Suggestions
 
