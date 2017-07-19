@@ -16,4 +16,4 @@ Cosmos DB makes it easy to step right in where I used to use Mongo, because it l
 
 One of the best ways to create a MEAN app is to start with the [Angular CLI](https://github.com/angular/angular-cli) to generate a starting point. We'll use this and extend it to include Node.js and Express.js, to serve our future APIs to the Angular app. Then we'll test out an API to make sure it works.
 
-[![MEAN and Cosmos DB - Part 1](https://img.youtube.com/vi/vlZRP0mDabM/0.jpg)](https://www.youtube.com/watch?v=vlZRP0mDabM)
+[![MEAN and Cosmos DB - Part 1](https://img.youtube.com/vi/lIwJIYcGSUg/0.jpg)](https://www.youtube.com/watch?v=lIwJIYcGSUg)
