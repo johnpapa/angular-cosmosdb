@@ -23,3 +23,9 @@ One of the best ways to create a MEAN app is to start with the [Angular CLI](htt
 I create the UI with Angular and connect to the Express APIs. I use the [Angular CLI](https://github.com/angular/angular-cli) to generate a the component and service the app needs. Then I build the app and show it in the browser.
 
 [![MEAN and Cosmos DB - Part 3](https://img.youtube.com/vi/MnxHuqcJVoM/0.jpg)](https://www.youtube.com/watch?v=MnxHuqcJVoM)
+
+### Part 4 - Cosmos DB
+
+Using the Azure CLI, I create the Cosmos DB account to represent a MongoDB model database and deploy it to Azure. Then I show how to view what we created in the Azure portal.
+
+[![MEAN and Cosmos DB - Part 4](https://img.youtube.com/vi/hfUM-AbOh94/0.jpg)](https://www.youtube.com/watch?v=hfUM-AbOh94)
