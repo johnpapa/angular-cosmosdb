@@ -24,8 +24,14 @@ I create the UI with Angular and connect to the Express APIs. I use the [Angular
 
 [![MEAN and Cosmos DB - Part 3](https://img.youtube.com/vi/MnxHuqcJVoM/0.jpg)](https://www.youtube.com/watch?v=MnxHuqcJVoM)
 
-### Part 4 - Cosmos DB
+### Part 4 - Creating Cosmos DB
 
 Using the Azure CLI, I create the Cosmos DB account to represent a MongoDB model database and deploy it to Azure. Then I show how to view what we created in the Azure portal.
 
 [![MEAN and Cosmos DB - Part 4](https://img.youtube.com/vi/hfUM-AbOh94/0.jpg)](https://www.youtube.com/watch?v=hfUM-AbOh94)
+
+### Part 5 - Querying Cosmos DB
+
+This next video shows how to connect to the MongoDB database with Azure Cosmos DB, using Mongoose, and query it for data.
+
+[![MEAN and Cosmos DB - Part 5](https://img.youtube.com/vi/yjUZ0H7N3RY/0.jpg)](https://www.youtube.com/watch?v=yjUZ0H7N3RY)
