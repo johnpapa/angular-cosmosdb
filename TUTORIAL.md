@@ -329,13 +329,6 @@ function checkServerError(res, error) {
     return error;
   }
 }
-function checkFound(res, hero) {
-  if (!hero) {
-    res.status(404).send('Hero not found.');
-    return;
-  }
-  return hero;
-}
 
 module.exports = {
   getHeroes,
@@ -361,17 +354,18 @@ router.post('/hero', (req, res) => {
 
 ```javascript
 function putHero(req, res) {
-  const originalHero = {
-    id: parseInt(req.params.id, 10),
+  const id = parseInt(req.params.id, 10);
+  const updatedHero = {
+    id: id,
     name: req.body.name,
     saying: req.body.saying
   };
-  Hero.findOne({ id: originalHero.id }, (error, hero) => {
+  Hero.findOne({ id: id }, (error, hero) => {
     if (checkServerError(res, error)) return;
     if (!checkFound(res, hero)) return;
 
-    hero.name = originalHero.name;
-    hero.saying = originalHero.saying;
+    hero.name = updatedHero.name;
+    hero.saying = updatedHero.saying;
     hero.save(error => {
       if (checkServerError(res, error)) return;
       res.status(200).json(hero);
@@ -391,6 +385,14 @@ function deleteHero(req, res) {
     .catch(error => {
       if (checkServerError(res, error)) return;
     });
+}
+
+function checkFound(res, hero) {
+  if (!hero) {
+    res.status(404).send('Hero not found.');
+    return;
+  }
+  return hero;
 }
 
 module.exports = {
