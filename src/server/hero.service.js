@@ -16,7 +16,7 @@ function getHeroes(req, res) {
     });
 }
 
-function postHeroes(req, res) {
+function postHero(req, res) {
   const originalHero = { id: req.body.id, name: req.body.name, saying: req.body.saying };
   const hero = new Hero(originalHero);
   hero.save(error => {
@@ -65,6 +65,7 @@ function checkServerError(res, error) {
     return error;
   }
 }
+
 function checkFound(res, hero) {
   if (!hero) {
     res.status(404).send('Hero not found.');
@@ -75,7 +76,7 @@ function checkFound(res, hero) {
 
 module.exports = {
   getHeroes,
-  postHeroes,
+  postHero,
   putHero,
   deleteHero
 };

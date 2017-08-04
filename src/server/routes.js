@@ -8,7 +8,7 @@ router.get('/heroes', (req, res) => {
 });
 
 router.post('/hero', (req, res) => {
-  heroService.postHeroes(req, res);
+  heroService.postHero(req, res);
 });
 
 router.put('/hero/:id', (req, res) => {
