@@ -313,7 +313,7 @@ module.exports = router;
 1. In the `src/server/hero.service`, create the post method and the helper functions.
 
 ```javascript
-function postHeroes(req, res) {
+function postHero(req, res) {
   const originalHero = { id: req.body.id, name: req.body.name, saying: req.body.saying };
   const hero = new Hero(originalHero);
   hero.save(error => {
@@ -339,7 +339,7 @@ function checkFound(res, hero) {
 
 module.exports = {
   getHeroes,
-  postHeroes
+  postHero
 };
 ```
 
@@ -347,7 +347,7 @@ module.exports = {
 
 ```javascript
 router.post('/hero', (req, res) => {
-  heroService.postHeroes(req, res);
+  heroService.postHero(req, res);
 });
 ```
 
@@ -395,7 +395,7 @@ function deleteHero(req, res) {
 
 module.exports = {
   getHeroes,
-  postHeroes,
+  postHero,
   putHero,
   deleteHero
 };
@@ -405,7 +405,7 @@ module.exports = {
 
 ```javascript
 router.post('/hero', (req, res) => {
-  heroService.postHeroes(req, res);
+  heroService.postHero(req, res);
 });
 ```
 
