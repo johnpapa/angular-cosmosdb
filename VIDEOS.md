@@ -35,3 +35,9 @@ Using the Azure CLI, I create the Cosmos DB account to represent a MongoDB model
 This next video shows how to connect to the MongoDB database with Azure Cosmos DB, using Mongoose, and query it for data.
 
 [![MEAN and Cosmos DB - Part 5](https://img.youtube.com/vi/sI5hw6KPPXI/0.jpg)](https://www.youtube.com/watch?v=sI5hw6KPPXI)
+
+### Part 6 - POST, PUT, and DELETE
+
+This next video shows how to POST, PUT, and DELETE to the MongoDB database with Azure Cosmos DB, using Mongoose.
+
+[![MEAN and Cosmos DB - Part 6](https://img.youtube.com/vi/Y5mdAlFGZjc/0.jpg)](https://www.youtube.com/watch?v=Y5mdAlFGZjc)
