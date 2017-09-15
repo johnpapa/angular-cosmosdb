@@ -1,0 +1,15 @@
+{
+  "name": "angular-cosmosdb",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.1"
+  },
+  "devDependencies": {}
+}

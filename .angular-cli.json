@@ -6,8 +6,16 @@
   "apps": [
     {
       "root": "src/client",
-      "outDir": "dist",
-      "assets": ["assets", "favicon.ico"],
+      "outDir": "dist/publicweb",
+      "assets": [
+        "assets",
+        "favicon.ico",
+        {
+          "glob": "**/*.*",
+          "input": "../server/",
+          "output": "../"
+        }
+      ],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
