@@ -6,7 +6,7 @@ You can [watch me build the app as part of my series here](https://johnpapa.net/
 
 You can [view all videos together here](/VIDEOS.md)
 
-[Learn more about developing Node.js apps with Azure's cloud services here](https://docs.microsoft.com/en-us/nodejs/azure)
+[Learn more about developing Node.js apps with Azure's cloud services here](https://docs.microsoft.com/nodejs/azure?WT.mc_id=angularcosmosdb-github-jopapa)
 
 ## Docker
 
@@ -26,7 +26,7 @@ docker run -d -p 3000:80 $dockerImage
     npm install -g @angular/cli
     ```
 
-1. Install the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+1. Install the [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?WT.mc_id=angularcosmosdb-github-jopapa)
 
 ## Getting Started
 
