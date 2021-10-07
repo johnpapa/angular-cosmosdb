@@ -1,20 +1,20 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const routes = require('./routes');
+const express = require("express");
+const routes = require("./routes");
+const path = require("path");
 
-const publicweb = './publicweb';
+const publicweb = path.resolve("dist", "publicweb");
 const app = express();
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(publicweb));
 console.log(`serving ${publicweb}`);
 
-app.use('/api', routes);
+app.use("/api", routes);
 
-app.get('*', (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(`index.html`, { root: publicweb });
 });
 
-const port = process.env.PORT || '3000';
+const port = process.env.PORT || "3000";
 app.listen(port, () => console.log(`API running on localhost:${port}`));
